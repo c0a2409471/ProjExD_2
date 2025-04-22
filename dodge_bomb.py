@@ -27,6 +27,9 @@ def check_bound(rct:pg.Rect)-> tuple[bool,bool]:
     if rct.top<0 or HEIGHT<rct.bottom:
         tate=False
     return yoko,tate
+
+
+
 def gameover(screen:pg.Surface)->None:
     """
     ゲームオーバー時に,半透明の黒い画面上に「Game Over」と表
@@ -45,6 +48,7 @@ def gameover(screen:pg.Surface)->None:
     pg.display.update()
     time.sleep(5)
     
+
 def init_bb_imgs() -> tuple[list[pg.Surface], list[int]]:
     """
     サイズの異なる爆弾Surfaceを要素としたリストと加速度リスト
@@ -58,11 +62,12 @@ def init_bb_imgs() -> tuple[list[pg.Surface], list[int]]:
         bb_img.set_colorkey((0,0,0))
         bb_imgs.append(bb_img)
     return bb_imgs,bb_accs
+
+
 def get_kk_img(sum_mv: tuple[int, int]) -> pg.Surface:
     """
     移動量の合計値タプルに対応する向きの画像Surfaceを返す
     """
-    idou = 
 
 
 
